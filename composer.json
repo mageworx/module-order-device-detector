@@ -12,9 +12,7 @@
         "magento/module-checkout": ">=100.2.2 <101",
         "magento/module-quote": ">=101.0.2 <102",
         "mageworx/module-ordersbase": ">=1.1.1",
-        "piwik/device-detector": "@stable",
-        "ext-json": "*",
-        "ext-intl": "*"
+        "matomo/device-detector": "@stable"
     },
     "type": "magento2-module",
     "version": "1.0.0",
