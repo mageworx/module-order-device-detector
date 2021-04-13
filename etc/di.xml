@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © MageWorx. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Dependency injection -->
+    <preference for="MageWorx\OrdersBase\Api\DeviceDataParserInterface" type="MageWorx\OrderDeviceDetector\Model\DeviceDataParser"/>
+    <type name="MageWorx\OrderDeviceDetector\Observer\OrderPlaced">
+        <arguments>
+            <argument name="deviceDetectorFactory" xsi:type="object" shared="false">MageWorx\OrderDeviceDetector\Model\DeviceDetectorFactory</argument>
+        </arguments>
+    </type>
+    <!-- Plugins -->
+    <type name="Magento\Sales\Api\OrderRepositoryInterface">
+        <plugin name="mageworx_order_base_save_device_data" type="MageWorx\OrderDeviceDetector\Plugin\Order\SaveAttributes"/>
+        <plugin name="mageworx_order_base_get_device_data" type="MageWorx\OrderDeviceDetector\Plugin\Order\GetAttributes"/>
+    </type>
+</config>

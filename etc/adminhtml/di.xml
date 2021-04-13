@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © MageWorx. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Plugins -->
+    <type name="Magento\Sales\Block\Adminhtml\Order\View\Info">
+        <plugin name="mageworx_order_editor_add_device_info_to_customer_account_block"
+                type="MageWorx\OrderDeviceDetector\Plugin\Block\Sales\Adminhtml\Order\View\Info"/>
+    </type>
+</config>
