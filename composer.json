@@ -1,11 +1,6 @@
 {
     "name": "mageworx/module-order-device-detector",
     "description": "Device Detector plugin for MageWorx Order Editor module",
-    "config": {
-        "platform": {
-            "php": ">=7.1"
-        }
-    },
     "require": {
         "magento/framework": ">=102.0.0",
         "mageworx/module-ordersbase": ">=2.0.0",
